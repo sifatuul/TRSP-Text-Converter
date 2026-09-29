@@ -1,34 +1,19 @@
-TRSP Converter — Unicode → Bijoy Word Utility
-==============================================
-
-A standalone browser tool for The Royal Scientific Publications Ltd (TRSP).
+TRSP Converter
+==============
+Minimal Unicode Bangla -> Bijoy/SutonnyMJ converter for TRSP publishing work.
 
 Features
---------
-- Unicode Bangla → Bijoy / SutonnyMJ conversion
-- Mixed Bangla + English support
-- English formatted as Times New Roman
-- Bangla formatted as SutonnyMJ
-- Copy for Word via rich HTML + RTF + plain-text clipboard formats
-- Source background colours are stripped from Word output
-- Bold/italic/underline and common pasted structure are retained where possible
-- Responsive modern TRSP-branded interface
-- Dark/light mode
-- No server/backend required
+- Unicode Bangla -> Bijoy conversion
+- Larger editing text for comfortable reading
+- Copy for Word with HTML + RTF + plain text
+- Bangla uses SutonnyMJ; English uses Times New Roman in Word output
+- Source background/shading is removed from copied content
+- Works offline after extraction
+
+Requirements
+- SutonnyMJ must be installed on the target computer for correct Bijoy rendering in Word.
 
 Usage
------
-1. Open index.html in Chrome/Edge.
-2. Paste Unicode Bangla text.
-3. Click Convert.
-4. Click Copy for Word.
-5. Paste into Microsoft Word. Use Keep Source Formatting if Word asks.
-
-Requirement
------------
-SutonnyMJ must be installed on the computer where the Word document is opened.
-
-Note
-----
-The conversion engine is bundled locally. Very unusual legacy Bijoy strings or
-rare complex conjuncts may still require an enterprise-grade reference engine.
+1. Paste or type Unicode Bangla.
+2. Click Convert.
+3. Click Copy for Word and paste into Microsoft Word.

@@ -138,7 +138,6 @@ $('convertBtn').onclick=convert;
 $('copyBtn').onclick=copyWord;
 $('copyPlainBtn').onclick=async()=>{try{await navigator.clipboard.writeText(outputEditor.innerText||'');toast('Bijoy plain text copied')}catch(_){toast('Clipboard permission denied')}};
 $('clearBtn').onclick=()=>{inputEditor.innerHTML='';outputEditor.innerHTML='';stats();inputEditor.focus();};
-$('themeBtn').onclick=()=>document.body.classList.toggle('dark');
 $('pasteBtn').onclick=async()=>{try{inputEditor.innerText=await navigator.clipboard.readText();stats();inputEditor.focus();}catch(_){toast('Clipboard permission denied')}};
 inputEditor.addEventListener('input',stats); outputEditor.addEventListener('copy',copySelection);
 document.addEventListener('keydown',e=>{if(e.ctrlKey&&e.key==='Enter'){e.preventDefault();convert()}});
