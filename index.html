@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="TRSP Converter — Unicode Bangla to Bijoy/SutonnyMJ converter for Microsoft Word.">
+<title>TRSP Converter — Unicode → Bijoy</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/engine.js"></script>
+<script src="js/app.js" defer></script>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#" aria-label="TRSP Converter home">
+    <img src="assets/trsp-converter-logo.svg" alt="TRSP Converter logo">
+    <span class="brand-copy"><strong>TRSP Converter</strong><small>Publishing Utility</small></span>
+  </a>
+  <div class="top-actions">
+    <a class="company-link" href="https://the-royal-scientific-publications.com/" target="_blank" rel="noopener">TRSP Website ↗</a>
+    <button id="themeBtn" class="icon-btn" title="Toggle theme" aria-label="Toggle theme">◐</button>
+    <button id="clearBtn" class="ghost-btn">Clear</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="eyebrow"><span class="dot"></span> TRSP INTERNAL TOOL</div>
+    <h1>Unicode <span>→</span> Bijoy</h1>
+    <p>Convert Bangla content into Word-ready SutonnyMJ text while keeping English in Times New Roman.</p>
+    <div class="hero-pills">
+      <span>✓ Word Ready</span><span>✓ Mixed Bangla + English</span><span>✓ Rich Clipboard</span>
+    </div>
+  </section>
+
+  <section class="workspace" aria-label="Converter workspace">
+    <article class="card editor-card">
+      <div class="card-head">
+        <div class="section-title"><span class="step">01</span><div><strong>Unicode Input</strong><small>Paste or type the original content</small></div></div>
+        <button id="pasteBtn" class="small-btn">Paste</button>
+      </div>
+      <div id="inputEditor" class="editor input-editor" contenteditable="true" spellcheck="false" data-placeholder="Paste or type Unicode Bangla here…"></div>
+      <div class="card-foot"><span id="inputStats">0 characters</span><span>Unicode</span></div>
+    </article>
+
+    <div class="convert-column">
+      <div class="convert-line"></div>
+      <button id="convertBtn" class="convert-btn"><span>Convert</span><b>→</b></button>
+      <small>Ctrl + Enter</small>
+      <div class="convert-line"></div>
+    </div>
+
+    <article class="card editor-card output-card">
+      <div class="card-head">
+        <div class="section-title"><span class="step output-step">02</span><div><strong>Bijoy Output</strong><small>SutonnyMJ + Times New Roman</small></div></div>
+        <div class="output-actions"><button id="copyPlainBtn" class="small-btn">Plain</button><button id="copyBtn" class="primary-small">Copy for Word</button></div>
+      </div>
+      <div id="outputEditor" class="editor output-editor"></div>
+      <div class="card-foot"><span id="outputStats">0 characters</span><span class="word-ready"><i></i> Word Ready</span></div>
+    </article>
+  </section>
+
+  <section class="spec-strip">
+    <div><span class="spec-icon">A</span><div><b>English</b><small>Times New Roman · 12 pt</small></div></div>
+    <div><span class="spec-icon bn">অ</span><div><b>Bangla</b><small>SutonnyMJ · 12 pt</small></div></div>
+    <div><span class="spec-icon clip">▣</span><div><b>Clipboard</b><small>HTML + RTF + plain text</small></div></div>
+    <div><span class="spec-icon clean">✓</span><div><b>Clean Output</b><small>No text background colour</small></div></div>
+  </section>
+
+  <section class="instructions">
+    <div><span class="guide-number">01</span><div><b>Paste</b><p>Paste Unicode Bangla or mixed Bangla + English content.</p></div></div>
+    <div><span class="guide-number">02</span><div><b>Convert</b><p>Convert the content to SutonnyMJ/Bijoy encoding.</p></div></div>
+    <div><span class="guide-number">03</span><div><b>Copy for Word</b><p>Paste into Word with the correct fonts and no source background colour.</p></div></div>
+  </section>
+
+  <footer>
+    <div><strong>TRSP Converter</strong> <span>•</span> Unicode → Bijoy Word Utility</div>
+    <a href="https://the-royal-scientific-publications.com/" target="_blank" rel="noopener">The Royal Scientific Publications Ltd ↗</a>
+  </footer>
+</main>
+<div id="toast" class="toast" role="status"></div>
+</body>
+</html>
